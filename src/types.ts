@@ -5,6 +5,6 @@ export interface Question {
   answers: string[]
   correctAnswer: number
 
-  isCorrectUserAnswer?: boolean
-  userSelectedAnswer?: number
+  isCorrectUserAnswer?: boolean // para hacer un contador y saber cuantas respuestad correctas hay
+  userSelectedAnswer?: number // respuesta del usuario
 }

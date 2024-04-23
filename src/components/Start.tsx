@@ -7,6 +7,7 @@ export function Start() {
   const fetchQuestions = useQuestionsStore((state) => state.fetchQuestions)
 
   const handleClick = () => {
+    console.log('se hizo fetch de las questions')
     fetchQuestions(LIMIT_QUESTIONS)
   }
 

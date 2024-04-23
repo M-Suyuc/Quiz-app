@@ -17,9 +17,11 @@ import { ArrowBackIosNew, ArrowForwardIos } from '@mui/icons-material'
 
 const Question = ({ info }: { info: QuestionType }) => {
   const selectAnswer = useQuestionsStore((state) => state.selectAnswer)
+  const nextQuestion = useQuestionsStore((state) => state.nextQuestion)
 
   const createHandleClick = (answerIndex: number) => () => {
     selectAnswer(info.id, answerIndex)
+    nextQuestion()
   }
 
   const getBackgroundColor = (info: QuestionType, index: number) => {
@@ -75,6 +77,7 @@ export const Game = () => {
   const previousQuestion = useQuestionsStore((state) => state.previousQuestion)
 
   const questionInfo = questions[currentQuestion]
+  console.log(questionInfo)
 
   return (
     <>

@@ -10,6 +10,7 @@ function App() {
   const questions = useQuestionsStore((state) => state.questions)
   const theme = useTheme()
   const medium = useMediaQuery(theme.breakpoints.up('md'))
+  console.log(questions)
 
   return (
     <>
