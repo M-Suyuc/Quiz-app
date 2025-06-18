@@ -27,7 +27,7 @@ function App() {
               JavaScript Quiz
             </Typography>
           </Stack>
-          {questions.length === 0 && <Start />}
+          {questions && <Start />}
           {questions.length > 0 && <Game />}
         </Container>
       </main>
